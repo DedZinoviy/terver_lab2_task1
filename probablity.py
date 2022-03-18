@@ -9,4 +9,4 @@ class Probability:
         return 1 - probability
 
     def bernoulli(p, n, m):
-        return Combinatoric.combinations_without_repeats(n, m) * p**m * negativeProbability(p)**(n-m)
+        return Combinatoric.combinations_without_repeats(n, m) * p**m * Probability.negativeProbability(p)**(n-m)
