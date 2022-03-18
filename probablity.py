@@ -1,5 +1,4 @@
 from combinatoric import Combinatoric
-from main import negativeProbability
 
 class Probability:
     def __init__(self):
