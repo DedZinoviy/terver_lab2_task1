@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-# Form implementation generated from reading ui file 'C:\Users\admin\Desktop\LR2\ui.ui'
+
+# Form implementation generated from reading ui file 'D:\LR2\ui.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -13,23 +14,25 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(829, 331)
+        MainWindow.resize(1053, 449)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
-        self.conditionTextBrowser = QtWidgets.QTextBrowser(self.centralwidget)
-        self.conditionTextBrowser.setObjectName("conditionTextBrowser")
-        self.gridLayout.addWidget(self.conditionTextBrowser, 0, 0, 1, 1)
         self.schemaLabel = QtWidgets.QLabel(self.centralwidget)
+        self.schemaLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.schemaLabel.setObjectName("schemaLabel")
         self.gridLayout.addWidget(self.schemaLabel, 1, 0, 1, 1)
         self.formulaLabel = QtWidgets.QLabel(self.centralwidget)
+        self.formulaLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.formulaLabel.setObjectName("formulaLabel")
         self.gridLayout.addWidget(self.formulaLabel, 2, 0, 1, 1)
+        self.resultTextEdit = QtWidgets.QTextEdit(self.centralwidget)
+        self.resultTextEdit.setObjectName("resultTextEdit")
+        self.gridLayout.addWidget(self.resultTextEdit, 5, 0, 1, 1)
         self.probabilityTable = QtWidgets.QTableWidget(self.centralwidget)
-        self.probabilityTable.setMinimumSize(QtCore.QSize(811, 51))
-        self.probabilityTable.setMaximumSize(QtCore.QSize(16777215, 51))
+        self.probabilityTable.setMinimumSize(QtCore.QSize(1031, 100))
+        self.probabilityTable.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.probabilityTable.setObjectName("probabilityTable")
         self.probabilityTable.setColumnCount(6)
         self.probabilityTable.setRowCount(1)
@@ -48,15 +51,17 @@ class Ui_MainWindow(object):
         item = QtWidgets.QTableWidgetItem()
         self.probabilityTable.setHorizontalHeaderItem(5, item)
         self.gridLayout.addWidget(self.probabilityTable, 3, 0, 1, 1)
-        self.resultTextEdit = QtWidgets.QTextEdit(self.centralwidget)
-        self.resultTextEdit.setObjectName("resultTextEdit")
-        self.gridLayout.addWidget(self.resultTextEdit, 4, 0, 1, 1)
+        self.conditionTextBrowser = QtWidgets.QTextBrowser(self.centralwidget)
+        self.conditionTextBrowser.setObjectName("conditionTextBrowser")
+        self.gridLayout.addWidget(self.conditionTextBrowser, 0, 0, 1, 1)
         self.calcButton = QtWidgets.QPushButton(self.centralwidget)
         self.calcButton.setObjectName("calcButton")
-        self.gridLayout.addWidget(self.calcButton, 5, 0, 1, 1)
+        self.gridLayout.addWidget(self.calcButton, 6, 0, 1, 1)
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout.addItem(spacerItem, 4, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 829, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1053, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -69,11 +74,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "ТерВер ЛР-2 3 вар. №1"))
-        self.conditionTextBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">Найти вероятность отказа схемы, приведённой на рисунке, предполагая, что отказы отдельных элементов независимы и равны соответственно q</span><span style=\" font-size:9pt; vertical-align:sub;\">i</span></p></body></html>"))
         self.schemaLabel.setText(_translate("MainWindow", "TextLabel"))
         self.formulaLabel.setText(_translate("MainWindow", "TextLabel"))
         item = self.probabilityTable.verticalHeaderItem(0)
@@ -90,4 +90,9 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "5"))
         item = self.probabilityTable.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "6"))
+        self.conditionTextBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">Найти вероятность отказа схемы, приведённой на рисунке, предполагая, что отказы отдельных элементов независимы и равны соответственно q</span><span style=\" font-size:9pt; vertical-align:sub;\">i</span></p></body></html>"))
         self.calcButton.setText(_translate("MainWindow", "Вычислить"))
