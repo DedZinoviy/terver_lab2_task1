@@ -11,10 +11,6 @@ def electicScheme4var(elementProbabilityList):
     return elementProbabilityList[0] + Probability.negativeProbability(elementProbabilityList[0]) *(act_1 * act_2)
 
 
-'''for element in input().split():
-    float_list.append(float(element))
-print(electicScheme4var(float_list))'''
-
 def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
     try:
@@ -65,5 +61,5 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication([])
     application = mywindow()
     application.show()
-    
     sys.exit(app.exec())
+    
