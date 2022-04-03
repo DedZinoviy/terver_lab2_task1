@@ -42,13 +42,17 @@ class mywindow(QtWidgets.QMainWindow):
         #Считать введённые пользователем данные
         float_list = []
         for i in range(0, 6):
-            element = self.ui.probabilityTable.item(0,i).text()
-            # Проверить введенные данные
-            if (float(element) - 1.00 > 0.00) or (float(element) + 1.00 < 1.00):
-                QtWidgets.QMessageBox.information(self, "Ошибка", "Вероятность должна быть в промежутке [0.00; 1.00]")
+            try:
+                element = float(self.ui.probabilityTable.item(0,i).text())
+                # Проверить введенные данные
+                if (element - 1.00 > 0.00) or (element + 1.00 < 1.00):
+                    QtWidgets.QMessageBox.information(self, "Ошибка", "Вероятность должна быть в промежутке [0.00; 1.00]")
+                    return
+                float_list.append(element)
+            except:
+                QtWidgets.QMessageBox.warning(self, "Ошибка ввода", "Некорректный формат ввода \"" + self.ui.probabilityTable.item(0,i).text()
+                + "\"\nВероятность задается десятичной дробью, целая часть от дробной должна отделяться точкой \".\"")
                 return
-            float_list.append(float(element))
-        #n = self.ui.n_spinBox.value()
 
         # Произвести вычисления по формуле
         result = electicScheme4var(float_list)
@@ -56,6 +60,8 @@ class mywindow(QtWidgets.QMainWindow):
         # Вывести результат в поле для ответа
         str_result = "{:01.12f}".format(result)
         self.ui.resultTextEdit.setText(str_result)
+        
+            
 
 if __name__ == '__main__': 
     app = QtWidgets.QApplication([])
